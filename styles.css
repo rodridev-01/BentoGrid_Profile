@@ -5,7 +5,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -61,10 +62,10 @@ body {
   font-size: 1rem;
   margin: 5px 0;
   background: linear-gradient(90deg, #ff7a18, #af002d, #319197);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
-  color: transparent; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   animation: gradient-text 1.5s infinite alternate;
 }
 
@@ -72,13 +73,11 @@ body {
   0% {
     background-position: 0%;
   }
+
   100% {
     background-position: 100%;
   }
 }
-
-
-
 
 .profile-text p a {
   text-decoration: none;
@@ -97,16 +96,13 @@ body {
   margin-right: 5px;
 }
 
-.bio{
+.bio {
   font-size: 0.95rem;
   max-width: 100%;
   color: #8598BC;
   font-style: italic;
   margin-top: 10px;
   transition: color 0.3s ease-in-out;
-}
-.bio:hover {
-  color: #58a6ff;
 }
 
 /* Navigation */
@@ -122,7 +118,7 @@ body {
 
 .sidebar nav ul li a {
   display: flex;
-  align-items: center; 
+  align-items: center;
   text-decoration: none;
   font-size: 0.9rem;
   color: #ccd6f6;
@@ -131,20 +127,20 @@ body {
 }
 
 .sidebar nav ul li a i {
-  font-size: 1.2rem; 
-  margin-right: 10px; 
+  font-size: 1.2rem;
+  margin-right: 10px;
   color: #8598BC;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .sidebar li a:hover {
   color: #fff;
-  transform: translateX(20px); 
+  transform: translateX(20px);
 }
 
 .sidebar nav ul li a:hover i {
-  color: #F7C02B; 
-  transform: scale(1.2); 
+  color: #F7C02B;
+  transform: scale(1.2);
 }
 
 
@@ -211,15 +207,15 @@ body {
   display: flex;
   align-items: flex-start;
   margin-bottom: 40px;
-  padding: 10px; 
-  transition: background 0.3s ease, box-shadow 0.3s ease; 
+  padding: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-item:hover {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border-radius: 12px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .date {
@@ -230,7 +226,7 @@ body {
 
 .dates {
   font-size: 0.8rem;
-  color: #94a3b8; 
+  color: #94a3b8;
 }
 
 .description {
@@ -238,11 +234,11 @@ body {
   padding-left: 20px;
 }
 
-.description h2{
+.description h2 {
   font-size: 0.9rem;
 }
 
-.description p{
+.description p {
   font-size: 0.8rem;
 }
 
@@ -253,7 +249,7 @@ body {
 }
 
 .tags span {
-  background-color: #334155; 
+  background-color: #334155;
   color: #e2e8f0;
   font-size: 0.8rem;
   padding: 5px 10px;
@@ -263,14 +259,14 @@ body {
 }
 
 .tags span:hover {
-  background-color: #475569; 
+  background-color: #475569;
 }
 
-section{
+section {
   padding-bottom: 5vh;
 }
 
-.preview img{
+.preview img {
   flex: 1;
   max-width: 200px;
   min-width: 150px;
@@ -283,7 +279,7 @@ a {
 }
 
 .footer {
-  text-align: center; 
+  text-align: center;
   padding: 20px 0;
 }
 
@@ -320,49 +316,50 @@ a {
     width: 100%;
     padding: 10px 20px;
   }
+
   .experience-item {
-    flex-direction: column; 
-    padding: 15px; 
+    flex-direction: column;
+    padding: 15px;
   }
 
   .description {
-    padding-left: 0; 
-    margin-top: 10px; 
+    padding-left: 0;
+    margin-top: 10px;
   }
 
-  .preview img{
+  .preview img {
     justify-content: center;
     flex: 1;
     max-width: 300px;
     height: auto;
   }
-  
+
 }
 
 .ad {
   display: inline-block;
-  border: 2px inset #ccd6f6; 
-  padding: 2px 5px; 
-  font-size: 0.8rem; 
+  border: 2px inset #ccd6f6;
+  padding: 2px 5px;
+  font-size: 0.8rem;
   background: linear-gradient(135deg, #030c1a, #0a192f, #1d2a44);
   width: auto;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
   border-color: #f7c02b;
-  color: #f7c02b; 
+  color: #f7c02b;
   border-radius: 100px;
 }
 
 .ad:focus {
-  outline: none; 
+  outline: none;
   border-color: #f7c02b;
   color: #f7c02b;
 }
 
 .ad::before {
   font-size: 16px;
-  color: inherit; 
+  color: inherit;
   position: absolute;
   left: 12px;
   top: 50%;
