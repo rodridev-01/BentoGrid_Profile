@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -17,7 +20,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 30% 70%;
-  max-width: 70%;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -56,9 +59,26 @@ body {
 
 .profile-text h2 {
   font-size: 1rem;
-  color: #CCD7ED;
   margin: 5px 0;
+  background: linear-gradient(90deg, #ff7a18, #af002d, #319197);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent; 
+  animation: gradient-text 1.5s infinite alternate;
 }
+
+@keyframes gradient-text {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+
+
 
 .profile-text p a {
   text-decoration: none;
@@ -81,6 +101,12 @@ body {
   font-size: 0.95rem;
   max-width: 100%;
   color: #8598BC;
+  font-style: italic;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out;
+}
+.bio:hover {
+  color: #58a6ff;
 }
 
 /* Navigation */
@@ -90,37 +116,37 @@ body {
 }
 
 .sidebar nav ul li {
-  margin: 20px 0;
+  margin: 10% 0;
+  padding-left: 20px;
 }
 
 .sidebar nav ul li a {
+  display: flex;
+  align-items: center; 
   text-decoration: none;
   font-size: 0.9rem;
   color: #ccd6f6;
-  position: relative; 
-  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, padding 0.3s;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.sidebar nav ul li a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition: width 0.3s;
+.sidebar nav ul li a i {
+  font-size: 1.2rem; 
+  margin-right: 10px; 
+  color: #8598BC;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.sidebar nav ul li a:hover {
+.sidebar li a:hover {
   color: #fff;
-  transform: translateX(15px) scale(1.1) rotate(5deg); 
-  padding-left: 40px; 
+  transform: translateX(20px); 
 }
 
-.sidebar nav ul li a:hover::before {
-  width: 100%; 
+.sidebar nav ul li a:hover i {
+  color: #F7C02B; 
+  transform: scale(1.2); 
 }
+
 
 /* Social Links */
 .social-links {
@@ -313,4 +339,33 @@ a {
   
 }
 
+.ad {
+  display: inline-block;
+  border: 2px inset #ccd6f6; 
+  padding: 2px 5px; 
+  font-size: 0.8rem; 
+  background: linear-gradient(135deg, #030c1a, #0a192f, #1d2a44);
+  width: auto;
+  transition: all 0.2s ease-in-out; 
+  cursor: pointer;
+  position: relative;
+  border-color: #f7c02b;
+  color: #f7c02b; 
+  border-radius: 100px;
+}
 
+.ad:focus {
+  outline: none; 
+  border-color: #f7c02b;
+  color: #f7c02b;
+}
+
+.ad::before {
+  font-size: 16px;
+  color: inherit; 
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

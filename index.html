@@ -3,12 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Rodrigo's Portfolio</title>
   <meta name="description" content="Mi Porfolio">
   <link rel="icon" href="devs.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rodrigo Porfolio">
+    <meta property="og:description" content="Explora mis proyectos.">
+    <meta property="og:image" content="Images/profile.webp">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:url" content="https://rodridev.xyz">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rodrigo Porfolio">
+    <meta name="twitter:description" content="Explora mis proyectos.">
+    <meta name="twitter:image" content="Images/profile.webp">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNHTBH7VY"></script>
@@ -28,12 +43,12 @@
     <aside class="sidebar">
       <div>
       <div class="profile">
-        <img src="Images/profile.jpg" alt="profile" class="profile-img">
+        <img src="Images/profile.webp" alt="profile" class="profile-img">
         <div class="profile-text">
           <h1>Rodrigo Peña</h1>
           <h2>Front End Developer</h2>
           <a href="mailto:rph26031994@gmail.com" target="_blank">
-            <p><i class="fa-solid fa-share"></i> Contacto</p>
+            <p class="ad">Disponible para trabajar <i class="fa-solid fa-arrow-right"></i></p>
           </a>
         </div>
       </div>
@@ -41,9 +56,9 @@
     </div>
       <nav>
         <ul>
-          <li><a href="#">SOBRE MI</a></li>
-          <li><a href="#experiencia">EXPERIENCIA</a></li>
-          <li><a href="#proyectos">PROYECTOS</a></li>
+          <li><a href="#"><i class="fa-solid fa-address-book"></i> SOBRE MI</a></li>
+          <li><a href="#experiencia"><i class="fa-solid fa-file"></i> EXPERIENCIA</a></li>
+          <li><a href="#proyectos"><i class="fa-solid fa-code"></i> PROYECTOS</a></li>
         </ul>
       </nav>
       <footer class="social-links">
@@ -83,15 +98,14 @@
         <div class="experience-container">
           <div class="experience-item">
             <div class="date">
-              <span class="dates">2023 — PRESENTE</span>
+              <span class="dates">2023 — DIC 2024</span>
             </div>
             <div class="description">
               <h2>Desarrollador de Software</h2>
-              <p>Desarrollo soluciones y sistemas basados en SQL, enfocados en optimizar procesos administrativos y
+              <p>Desarrolle soluciones y sistemas basados en SQL, enfocados en optimizar procesos administrativos y
                 fiscales. He diseñado y entregado herramientas como un sistema para la generación de recibos de
                 impuestos prediales personalizados, con opciones de impresión individual o masiva y consolidación de
-                datos en un único archivo. Actualmente, sigo trabajando en nuevos proyectos para ampliar funcionalidades
-                y adaptarme a las necesidades de los usuarios.
+                datos en un único archivo.
               </p>
               <div class="tags">
                 <span>C#</span><span>SQL</span><span>Report Viewer</span><span>Figma</span>
