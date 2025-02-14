@@ -50,7 +50,7 @@
       <div class="profile-header">
         <img src="Images/profile.webp" alt="Perfil" class="profile-img">
         <div class="profile-info">
-          <span class="status">🟢 Available To Work</span>
+          <span class="status tag">🟢 Disponible para trabajar</span>
           <h1>Rodrigo Peña</h1>
           <h2>I'm a <span class="highlight">Frontend Developer</span></h2>
         </div>
@@ -74,11 +74,12 @@
     </section>
 
     <!--About Me-->
-    <section class="item span-2 center">
+    <section class="item span-2 center quote-section">
       <p>
-        "Diseñando soluciones dinámicas y optimizadas."
+        Diseñando soluciones dinámicas y optimizadas.
       </p>
     </section>
+    
 
     <!--Social Links-->
     <section class="social-links small-grid span-3 item">
@@ -119,7 +120,7 @@
     </section>
 
     <!--Experience-->
-    <section class="item span-5">
+    <section class="item span-4">
       <div class="experience-container">
         <div class="experience-item small-item">
           <div class="date">
@@ -134,9 +135,20 @@
       </div>
     </section>
 
+    <!--Fine Section-->
+    <section class="span-2">
+      <img src="Images/fine.gif" class="gif-hover" alt="Fine">
+    </section>
+
+    <section class="span-2 this-is-fine">
+      <h2>"This is Fine"</h2>
+    </section>
+    
+    
+
     <section class="item span-4">
       <div class="experience-container">
-        <div class="experience-item small-item center">
+        <div class="experience-item small-item">
           <div class="date">
             <span class="dates">MAY — DIC 2024</span>
           </div>
@@ -150,8 +162,9 @@
       </div>
     </section>
 
-
-
+    <section class="span-2 item">
+      
+    </section>
   </div>
 
   <script>
@@ -161,8 +174,8 @@
       new Sortable(document.getElementById("grid"), {
         animation: 150,
         ghostClass: "sortable-ghost",
-        handle: isMobile ? ".drag-handle" : undefined, 
-        filter: isMobile ? ".non-draggable" : undefined 
+        handle: isMobile ? ".drag-handle" : undefined,
+        filter: isMobile ? ".non-draggable" : undefined
       });
 
       document.querySelectorAll(".small-grid").forEach(grid => {
@@ -173,24 +186,5 @@
         });
       });
     });
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const gifs = document.querySelectorAll(".gif-hover");
-
-      gifs.forEach((gif) => {
-        const staticSrc = gif.src;
-        const animatedSrc = gif.getAttribute("data-gif");
-
-        gif.addEventListener("mouseenter", () => {
-          gif.src = animatedSrc;
-        });
-
-        gif.addEventListener("mouseleave", () => {
-          gif.src = staticSrc;
-        });
-      });
-    });
-
   </script>
 </body>
