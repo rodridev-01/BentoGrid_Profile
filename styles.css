@@ -26,7 +26,6 @@ body {
   width: 100%;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -43,6 +42,7 @@ a {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
+  background-color: #6A5ACD;
 }
 
 .item {
@@ -271,7 +271,7 @@ a {
 
 .skills-icons i {
   transition: transform 0.3s;
-  font-size: 25px;
+  font-size: 40px;
 }
 
 .experience-container {
@@ -311,7 +311,7 @@ a {
 }
 
 .tags span {
-  background-color: #334155;
+  background-color: #212327;
   color: #e2e8f0;
   font-size: 0.8rem;
   padding: 5px 10px;
@@ -344,5 +344,8 @@ a {
   }
   .span-4 {
     grid-column: span 5;
+  }
+  .skills-icons i {
+    font-size: 32px;
   }
 }
