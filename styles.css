@@ -39,7 +39,7 @@ a {
   background: #444;
 }
 
-.container {
+.portfolio {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   gap: 10px;
@@ -56,6 +56,13 @@ a {
   color: white;
   font-size: 18px;
   align-self: stretch;
+  justify-self: stretch;
+}
+
+.drag-handle {
+  cursor: grab;
+  display: inline-block;
+  padding: 5px;
 }
 
 

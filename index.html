@@ -42,10 +42,11 @@
 
 <body>
   <!-- <div class="spotlight"></div> -->
-  <div class="container" id="grid">
+  <div class="portfolio" id="grid">
 
     <!--Profile-->
     <section class="profile-card item span-5">
+      <i class="fa-solid fa-grip-lines drag-handle"></i>
       <div class="profile-header">
         <img src="Images/profile.webp" alt="Perfil" class="profile-img">
         <div class="profile-info">
@@ -62,8 +63,13 @@
       </div>
 
       <div class="contact-buttons small-grid">
-        <button class="contact-btn"><i class="fa-solid fa-file"></i> Resume</button>
-        <button class="contact-btn"><i class="fa-solid fa-phone"></i> Contacto</button>
+        <button class="contact-btn"
+          onclick="window.open('https://drive.google.com/file/d/1sZfI2-5mSsPMg1uXJKfBwH-gFda5mrMs/view?usp=sharing', '_blank')">
+          <i class="fa-solid fa-file"></i> Resume
+        </button>
+        <button class="contact-btn" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">
+          <i class="fa-solid fa-phone"></i> Contacto
+        </button>
       </div>
     </section>
 
@@ -149,17 +155,25 @@
   </div>
 
   <script>
-    new Sortable(document.getElementById("grid"), {
-      animation: 150,
-      ghostClass: "blue-background-class"
-    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    document.querySelectorAll(".small-grid").forEach(grid => {
-      new Sortable(grid, {
+      new Sortable(document.getElementById("grid"), {
         animation: 150,
-        ghostClass: "sortable-ghost"
+        ghostClass: "sortable-ghost",
+        handle: isMobile ? ".drag-handle" : undefined, 
+        filter: isMobile ? ".non-draggable" : undefined 
+      });
+
+      document.querySelectorAll(".small-grid").forEach(grid => {
+        new Sortable(grid, {
+          animation: 150,
+          ghostClass: "sortable-ghost",
+          handle: isMobile ? ".drag-handle" : undefined
+        });
       });
     });
+
 
     document.addEventListener("DOMContentLoaded", () => {
       const gifs = document.querySelectorAll(".gif-hover");
