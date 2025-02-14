@@ -9,229 +9,185 @@
   <link rel="icon" href="devs.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Rodrigo Porfolio">
-    <meta property="og:description" content="Explora mis proyectos.">
-    <meta property="og:image" content="Images/profile.webp">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:url" content="https://rodridev.xyz">
-    <meta property="og:type" content="website">
-  
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rodrigo Porfolio">
-    <meta name="twitter:description" content="Explora mis proyectos.">
-    <meta name="twitter:image" content="Images/profile.webp">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Rodrigo Porfolio">
+  <meta property="og:description" content="Explora mis proyectos.">
+  <meta property="og:image" content="Images/profile.webp">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:url" content="https://rodridev.xyz">
+  <meta property="og:type" content="website">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNHTBH7VY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-  
-      gtag('config', 'G-TYNHTBH7VY');
-    </script>
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rodrigo Porfolio">
+  <meta name="twitter:description" content="Explora mis proyectos.">
+  <meta name="twitter:image" content="Images/profile.webp">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNHTBH7VY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TYNHTBH7VY');
+  </script>
 </head>
 
 <body>
   <!-- <div class="spotlight"></div> -->
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div>
-      <div class="profile">
-        <img src="Images/profile.webp" alt="profile" class="profile-img">
-        <div class="profile-text">
-          <h1>Rodrigo Peña</h1>
-          <h2>Front End Developer</h2>
-          <a href="mailto:rph26031994@gmail.com" target="_blank">
-            <p class="ad">Disponible para trabajar <i class="fa-solid fa-arrow-right"></i></p>
-          </a>
-        </div>
-      </div>
-      <p class="bio">Hago páginas web... porque ser astronauta requería demasiada física.</p>
-    </div>
-      <nav>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-address-book"></i> SOBRE MI</a></li>
-          <li><a href="#experiencia"><i class="fa-solid fa-file"></i> EXPERIENCIA</a></li>
-          <li><a href="#proyectos"><i class="fa-solid fa-code"></i> PROYECTOS</a></li>
-        </ul>
-      </nav>
-      <footer class="social-links">
-        <a href="https://github.com/rodridev-01" target="_blank">
-          <i class="fab fa-github logo-icon"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/rodridev26" target="_blank">
-          <i class="fab fa-linkedin logo-icon"></i>
-        </a>
-        <a href="https://www.instagram.com/rodrigou.py" target="_blank">
-          <i class="fab fa-instagram logo-icon"></i>
-        </a>
-        <a href="https://x.com/rodridev01" target="_blank">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://codepen.io/rodridev-01" target="_blank">
-          <i class="fa-brands fa-codepen"></i>
-        </a>
-      </footer>
-    </aside>
+  <div class="container" id="grid">
 
-    <!-- Main Content -->
-    <main class="content">
-      <section>
-        <h2>SOBRE MI</h2>
+      <!--Profile-->
+      <section class="profile-card item span-5">
+        <div class="profile-header">
+          <img src="Images/profile.webp" alt="Perfil" class="profile-img">
+          <div class="profile-info">
+            <span class="status">🟢 Available To Work</span>
+            <h1>Rodrigo Peña</h1>
+            <h2>I'm a <span class="highlight">Frontend Developer</span></h2>
+          </div>
+        </div>
+
+        <div class="tags small-grid">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Perú</span>
+          <span class="tag"><i class="fa-solid fa-code"></i>Developer</span>
+          <span class="tag"><i class="fa-solid fa-globe"></i> Web & Desktop</span>
+          <span class="tag"><i class="fa-solid fa-face-smile"></i> Good Boy</span>
+        </div>
+
+        <div class="contact-buttons small-grid">
+          <button class="contact-btn"><i class="fa-solid fa-file"></i> Resume</button>
+          <button class="contact-btn"><i class="fa-solid fa-phone"></i> Contacto</button>
+        </div>
+      </section>
+
+      <!--About Me-->
+      <section class="item span-2">
         <p>
-          Soy técnico en Computación e Informática, con una profunda pasión por el <strong>desarrollo de soluciones
-            web</strong> y de
-          escritorio. Me encanta construir productos dinámicos y creativos, abarcando todo el proceso desde la
-          concepción inicial hasta su implementación final. Mi enfoque está en crear experiencias intuitivas que
-          evolucionen y mejoren constantemente, basadas en las necesidades del usuario y el análisis de métricas.
-          Siempre en movimiento, siempre entregando resultados.
+          "Diseñando soluciones dinámicas y optimizadas."
         </p>
       </section>
-      <section>
-        <h2 id="experiencia">EXPERIENCIA</h2>
+
+      <!--Social Links-->
+      <section class="social-links item small-grid span-3">
+        <a href="https://github.com/rodridev-01" target="_blank">
+          <i class="fab fa-github logo-icon"></i> @rodridev-01
+        </a>
+        <a href="https://www.linkedin.com/in/rodridev26" target="_blank">
+          <i class="fab fa-linkedin logo-icon"></i> @rodridev26
+        </a>
+        <a href="https://www.instagram.com/rodrigou.py" target="_blank">
+          <i class="fab fa-instagram logo-icon"></i> @rodrigou.py
+        </a>
+        <a href="https://x.com/rodridev01" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i> @rodridev01
+        </a>
+      </section>
+
+        <!--Social Links-->
+        <section class="skills span-4 center">
+          <div class="skills-icons small-grid">
+            <i class="devicon-html5-plain colored item"></i>
+            <i class="devicon-css3-plain colored item"></i>
+            <i class="devicon-javascript-plain colored item"></i>
+            <i class="devicon-nodejs-plain colored item"></i>
+            <i class="devicon-mongodb-plain colored item"></i>
+            <i class="devicon-python-plain colored item"></i>
+            <i class="devicon-java-plain colored item"></i>
+            <i class="devicon-kotlin-plain colored item"></i>
+            <i class="devicon-git-plain colored item"></i>
+            <i class="devicon-github-original item"></i>
+            <i class="devicon-astro-plain colored item"></i>
+            <i class="devicon-react-original colored item"></i>
+            <i class="devicon-figma-plain colored item"></i>
+            <i class="devicon-markdown-original item"></i>
+            <i class="devicon-tailwindcss-plain colored item"></i>
+            <i class="devicon-csharp-plain colored item"></i>
+            <i class="devicon-typescript-plain colored item"></i>
+            <i class="devicon-mysql-plain colored item"></i>
+        </div>
+        
+      </section>
+      
+ 
+
+
+      <!--Experience-->
+      <section class="item span-2">
         <div class="experience-container">
-          <div class="experience-item">
+          <div class="experience-item small-item">
             <div class="date">
               <span class="dates">2023 — DIC 2024</span>
             </div>
             <div class="description">
-              <h2>Desarrollador de Software</h2>
-              <p>Desarrolle soluciones y sistemas basados en SQL, enfocados en optimizar procesos administrativos y
-                fiscales. He diseñado y entregado herramientas como un sistema para la generación de recibos de
-                impuestos prediales personalizados, con opciones de impresión individual o masiva y consolidación de
-                datos en un único archivo.
+              <p>Desarrollé sistemas SQL para optimizar procesos administrativos y fiscales, incluyendo una herramienta
+                para generar y consolidar recibos de impuestos prediales.
               </p>
-              <div class="tags">
-                <span>C#</span><span>SQL</span><span>Report Viewer</span><span>Figma</span>
-              </div>
             </div>
           </div>
-          <div class="experience-item">
+        </div>
+      </section>
+
+      <section class="item span-4">
+        <div class="experience-container">
+          <div class="experience-item small-item">
             <div class="date">
               <span class="dates">MAY — DIC 2024</span>
             </div>
             <div class="description">
-              <h2>Diseñador Front End</h2>
               <p>
-                Diseñé y optimicé el sitio web del Sistema de Gestión EFSRT, creando una experiencia intuitiva que
-                simplifica la organización de actividades de formación y agiliza los procesos de certificación. Logré
-                mejorar la usabilidad del sistema, facilitando el seguimiento de actividades y reduciendo la complejidad
-                en los flujos de trabajo.
+                Diseñé y optimicé el sitio web del Sistema de Gestión EFSRT, mejorando la usabilidad y agilizando
+                certificaciones y seguimiento de actividades.
               </p>
-              <div class="tags">
-                <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <h2 id="proyectos">PROYECTOS</h2>
-        <div class="experience-container">
-          <a href="https://booklin3.netlify.app" target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/bookstore.webp" alt="BooksStore">
-            </div>
-            <div class="description">
-              <h2>BooksLine <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
-              <p>Tienda de libros para un proyecto de eCommerce. Desarrollé la interfaz de usuario y la lógica de
-                negocio...</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://proyecto.live-ra.com" target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/efsrt.webp" alt="EFSRT">
-            </div>
-            <div class="description">
-              <h2>EFSRT <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
-              <p>Sistema facilita la gestión y seguimiento de las prácticas formativas, optimizando la organización de actividades académicas y automatizando los procesos de certificación, mejorando la eficiencia y precisión en cada etapa.</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span><span>PHP</span><span>MySQL</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://sofdata.netlify.app" target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/softdata.webp" alt="Softdata">
-            </div>
-            <div class="description">
-              <h2>Softdata Website <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
-              <p>Desarrollo web para Softdata.</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span><span>Astro</span><span>MongoDB</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://animebebop.netlify.app" target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/crunchy.webp" alt="crunchy">
-            </div>
-            <div class="description">
-              <h2>Crunchy.va <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
-              <p>Página web creada como una plantilla sobre anime, diseñada para ofrecer a los fanáticos de este género un espacio donde explorar información sobre sus series y personajes favoritos.</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://rodridev-01.github.io/Porfolio/" target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/portfolio.webp" alt="OldPortfolio">
-            </div>
-            <div class="description">
-              <h2>Portfolio Template <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
-              <p>Antiguo Portfolio, actualmente plantilla personalizable.</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
-              </div>
-            </div>
-          </a>
-          <a href="Images/Projects/game/Raccoon's Adventure V1.01.exe" download target="_blank" class="experience-item">
-            <div class="preview">
-              <img src="Images/Projects/raccon's.webp" alt="raccon's">
-            </div>
-            <div class="description">
-              <h2>Raccoon's Adventure <i class="fa-solid fa-download"></i></h2>
-              <p>Juego de plataformas sobre un mapache. corre y salta sobre plataformas para llegar a una meta o para
-                recolectar objetos, como monedas. El jugador debe evitar obstáculos y enemigos mientras avanza
-                a través del nivel. </p>
-              <div class="tags">
-                <span>C#</span><span>Unity</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-      <footer class="footer">
-          <p class="copyright">
-            <span>&copy;</span> 2025 Casi todos los derechos reservados.
-          </p>
-      </footer>
-      
-    </main>
+
+            <!--Fine Moment-->
+            <section class="span-4">
+              <img src="Images/fine.gif" class="gif-hover" data-gif="Images/fine.gif" alt="This is fine">
+            </section>
+
 
   </div>
+
+  <script>
+    new Sortable(document.getElementById("grid"), {
+      animation: 150,
+      ghostClass: "blue-background-class"
+    });
+
+    document.querySelectorAll(".small-grid").forEach(grid => {
+      new Sortable(grid, {
+        animation: 150,
+        ghostClass: "sortable-ghost"
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const gifs = document.querySelectorAll(".gif-hover");
+
+      gifs.forEach((gif) => {
+        const staticSrc = gif.src;
+        const animatedSrc = gif.getAttribute("data-gif");
+
+        gif.addEventListener("mouseenter", () => {
+          gif.src = animatedSrc;
+        });
+
+        gif.addEventListener("mouseleave", () => {
+          gif.src = staticSrc;
+        });
+      });
+    });
+
+  </script>
 </body>
-<!--
-<script>
-  var focusedCard = document.querySelector('.spotlight');
-
-  window.addEventListener('mousemove', e => {
-
-    var percentageX = e.pageX / window.innerWidth * 100;
-    var percentageY = e.pageY / window.innerHeight * 100;
-
-    focusedCard.style.backgroundImage = `radial-gradient(circle at ${percentageX}% ${percentageY}%, rgba(30, 77, 139, 0.2) 5px, rgba(30, 77, 139, 0) 400px)`;
-  });
-</script>
--->
-</html>
