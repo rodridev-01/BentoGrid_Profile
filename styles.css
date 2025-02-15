@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   background: #010a24;
   margin: 0;
@@ -85,6 +86,7 @@ a {
   0% {
     text-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347;
   }
+
   100% {
     text-shadow: 0 0 15px #ff4500, 0 0 25px #ff8c00;
   }
@@ -134,8 +136,6 @@ a {
   color: #82899f;
   opacity: 0.6;
 }
-
-
 
 /* Definir tamaños dinámicos en HTML */
 .span-2 {
@@ -188,11 +188,13 @@ a {
 
 .gif-hover {
   cursor: grab;
-  width:100%;
-  height: auto;
+  width: 100%; /* Mantiene el ancho al 100% del contenedor */
+  height: 100%; /* Se ajusta a la altura del contenedor padre */
   display: block;
   border-radius: 10px;
+  object-fit: cover; /* Estira la imagen sin deformarla */
 }
+
 
 .small-grid {
   display: grid;
@@ -297,6 +299,7 @@ a {
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
@@ -380,7 +383,7 @@ a {
 }
 
 .description p {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .tags {
@@ -414,6 +417,11 @@ a {
   font-weight: bold;
 }
 
+.decorative {
+  background: linear-gradient(45deg, #ff007f, #00c3ff);
+  border-radius: 8px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {
@@ -422,10 +430,18 @@ a {
 
   .portfolio {
     grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
   }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
   .span-4 {
     grid-column: span 5;
   }
+
   .skills-icons i {
     font-size: 32px;
   }
