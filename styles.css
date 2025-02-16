@@ -188,13 +188,12 @@ a {
 
 .gif-hover {
   cursor: grab;
-  width: 100%; /* Mantiene el ancho al 100% del contenedor */
-  height: 100%; /* Se ajusta a la altura del contenedor padre */
+  width: 100%;
+  height: 100%;
   display: block;
   border-radius: 10px;
-  object-fit: cover; /* Estira la imagen sin deformarla */
+  object-fit: cover;
 }
-
 
 .small-grid {
   display: grid;
@@ -277,14 +276,12 @@ a {
   margin-right: 5px;
 }
 
-/* Estado de disponibilidad */
 .status {
   font-size: 0.9rem;
   color: #4CAF50;
   font-weight: bold;
 }
 
-/* Botones de contacto */
 .contact-buttons {
   display: flex;
   gap: 10px;
@@ -422,6 +419,136 @@ a {
   border-radius: 8px;
 }
 
+#date-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+}
+
+#day {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+}
+
+#month {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#spotify-widget {
+  display: flex;
+  align-items: center;
+  max-width: 100%; 
+  height: 100%;
+  background: #304010;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.album-cover {
+  width: 140px;
+  height: 140px;
+  background: url('https://i.scdn.co/image/ab67616d0000b2731cf49e0f3eec2dad3c532728') center/cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.song-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Título y artista */
+.song-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.artist {
+  font-size: 1rem;
+  color: #b3b3b3;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+/* Botón de reproducción */
+.play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: #202226;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.play-button:hover {
+  transform: scale(1.05);
+}
+
+/* Ondas de animación */
+.wave-container {
+  display: none;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.wave {
+  width: 5px;
+  height: 15px;
+  background: #fff;
+  border-radius: 5px;
+  animation: wave-animation 1.2s infinite ease-in-out alternate;
+  transform-origin: bottom;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.2s; }
+.wave:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wave-animation {
+  0% { height: 5px; }
+  100% { height: 15px; }
+}
+
+.playing .wave-container {
+  display: flex;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {
@@ -444,5 +571,10 @@ a {
 
   .skills-icons i {
     font-size: 32px;
+  }
+
+  .album-cover {
+    width: 100px;
+    height: 100px;
   }
 }

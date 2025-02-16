@@ -28,7 +28,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
 
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNHTBH7VY"></script>
   <script>
@@ -122,7 +121,6 @@
         <i class="devicon-typescript-plain colored item"></i>
         <i class="devicon-mysql-plain colored item"></i>
       </div>
-
     </section>
 
     <!-- Fine Section -->
@@ -167,43 +165,39 @@
       <h2>"This is Fine"</h2>
     </section>
 
+    <!--Animated Gif-->
     <section class="span-4">
       <img src="Images/hello.webp" class="gif-hover" alt="hello">
     </section>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    <!--Date-->
+    <section class="span-2 widget-container">
+      <div id="date-widget">
+        <span id="day"></span>
+        <span id="month"></span>
+      </div>
+    </section>
 
-      new Sortable(document.getElementById("grid"), {
-        animation: 150,
-        ghostClass: "sortable-ghost",
-        handle: isMobile ? ".drag-handle" : undefined,
-        filter: isMobile ? ".non-draggable" : undefined
-      });
+    <section class="span-3">
+      <div id="spotify-widget">
+          <div class="album-cover"></div>
+          <div class="song-details">
+              <span class="song-title">Paris</span>
+              <span class="artist">Indigo</span>
+              <div class="controls">
+                  <div class="play-button"><i class="fa-solid fa-play"></i></div>
+                  <div class="wave-container">
+                      <span class="wave"></span>
+                      <span class="wave"></span>
+                      <span class="wave"></span>
+                  </div>
+              </div>
+          </div>
+          <audio id="audio" src="Audio/Indigo - Paris.mp3"></audio>
+      </div>
+  </section>
+  
+  
 
-      document.querySelectorAll(".small-grid").forEach(grid => {
-        new Sortable(grid, {
-          animation: 150,
-          ghostClass: "sortable-ghost",
-          handle: isMobile ? ".drag-handle" : undefined
-        });
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const gifImage = document.querySelector(".gif-hover");
-
-      gifImage.addEventListener("mouseenter", function () {
-        this.dataset.static = this.src;
-        this.src = this.dataset.gif;
-      });
-
-      gifImage.addEventListener("mouseleave", function () {
-        this.src = this.dataset.static;
-      });
-    });
-
-  </script>
+    <script src="script.js"></script>
 </body>
