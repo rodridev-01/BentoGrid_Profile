@@ -548,6 +548,10 @@ a {
   display: flex;
 }
 
+.mobile-only {
+  display: none;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -576,5 +580,10 @@ a {
   .album-cover {
     width: 100px;
     height: 100px;
+  }
+
+  .mobile-only {
+    display: block;
+    text-align: center;
   }
 }
